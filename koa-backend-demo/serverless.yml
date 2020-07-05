@@ -1,0 +1,17 @@
+# serverless.yml
+
+component: koa # (required) name of the component. In that case, it's koa.
+name: koa-backend-demo # (required) name of your koa component instance.
+
+inputs:
+  src:
+    src: ./ # (optional) path to the source folder. 
+    exclude:
+      - .env
+  region: ap-guangzhou
+  runtime: Nodejs12.16
+  apigatewayConf:
+    protocols:
+      - http
+      - https
+    environment: release
